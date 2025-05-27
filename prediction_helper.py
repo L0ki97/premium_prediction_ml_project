@@ -2,10 +2,10 @@ import pandas as pd
 import joblib
 from xgboost import XGBRegressor
 
-model=XGBRegressor()
+model_rest=XGBRegressor()
 
 model_young = joblib.load("artifacts/model_young.joblib")
-model_rest = model.load_model("artifacts/model_rest.json")
+model_rest.load_model("artifacts/model_rest.json")
 scaler_young = joblib.load("artifacts/scaler_young.joblib")
 scaler_rest = joblib.load("artifacts/scaler_rest.joblib")
 
